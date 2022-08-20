@@ -1,0 +1,221 @@
+/* backdrop */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 1000ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+/* modal */
+.modal {
+    position: absolute;
+
+    min-width: 528px;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    text-align: center;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 500ms var(--timing-function) 1000ms;
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--primary-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50% 50%;
+
+    @include transition(border, fill);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
+
+/* form */
+.form-legend {
+    margin-bottom: 12px;
+
+    color: var(--title-text-color);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+}
+
+.form-modal {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-modal__field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    &:not(:nth-last-child(3)) {
+        margin-bottom: 10px;
+    }
+
+    &:nth-last-child(3) {
+        margin-bottom: 20px;
+    }
+}
+
+.form-modal__input {
+    margin: 0;
+    padding: 11px 12px 11px 42px;
+
+    color: #000;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0;
+
+    @include transition(border);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color); 
+    }
+}
+
+.form-modal__comment {
+    resize: none;
+    padding: 11px 16px;
+
+    color: #000;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    @include transition(border);
+    cursor: pointer;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color); 
+    }
+}
+
+.form-modal__label {
+    margin-bottom: 4px;
+}
+
+.form-modal__icon {
+    position: absolute;
+    bottom: calc(0% + 12px);
+    left: 12px;
+
+    fill: var(--title-text-color);
+
+    @include transition(fill);
+
+    .form-modal__field:hover &,
+    .form-modal__input:focus + & {
+        fill: var(--accent-color);
+    }
+}
+
+.form-modal__field-check {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.form-modal__input-check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: absolute;
+
+    &:checked + .form-modal__box-check {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        background-origin: content-box;
+    }
+
+    &:checked + .form-modal__box-check {
+        .form-modal__icon-check {
+            fill: var(--primary-white-color);
+        }
+    }
+}
+
+.form-modal__box-check {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+
+    border: 2px solid var(--title-text-color);
+    border-radius: 4px;
+
+    @include transition(background-color, border);
+
+    .form-modal__input-check:focus + & {
+        outline: var(--accent-color);
+        border: 2px solid blue;
+    }
+}
+
+.form-modal__icon-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: transparent;
+
+    @include transition(fill);
+}
+
+.form-modal__link {
+    color: var(--accent-color);
+}

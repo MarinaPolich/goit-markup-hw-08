@@ -1,0 +1,28 @@
+.button {
+    @extend %button;
+    padding: 10px 32px;
+    
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+
+    font-weight: 700;
+    line-height: 1.9;
+    @include transition(background-color);
+
+    &--big {
+        padding: 10px 52px;
+    }
+    
+    &:hover,
+    &:focus {
+        background-color: #188CE8;
+    }
+}
+
+.button__icon {
+    fill: var(--primary-white-color);
+
+    &--left {
+        margin-left: 10px;
+    }
+}

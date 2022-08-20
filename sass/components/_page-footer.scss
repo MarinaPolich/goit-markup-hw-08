@@ -1,0 +1,23 @@
+.page-footer {
+    padding: 60px 0;
+
+    background-color: var(--footer-bg-color);
+}
+
+.page-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer__title {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    color: var(--primary-white-color);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
