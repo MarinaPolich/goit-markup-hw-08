@@ -24,7 +24,9 @@
         padding-bottom: 200px;
     }
 
-    @media (min-resolution: 2dppx) {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
         @include heroImg('hero-mob2x.jpeg');
     }
 }
@@ -33,7 +35,9 @@
     .hero {
         @include heroImg('hero-tab.jpeg');
 
-        @media (min-resolution: 2dppx) {
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
             @include heroImg('hero-tab2x.jpeg');
         }
     }
@@ -43,7 +47,9 @@
     .hero {
         @include heroImg('hero-desk.jpeg');
 
-        @media (min-resolution: 2dppx) {
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
             @include heroImg('hero-desk2x.jpeg');
         }
     }

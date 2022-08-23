@@ -1041,7 +1041,7 @@ body {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mob2x.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob2x.jpeg);
@@ -1055,7 +1055,7 @@ body {
   }
 }
 
-@media (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px) and (min-resolution: 2dppx) {
+@media (min-width: 480px) and (min-device-pixel-ratio: 2), (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 480px) and (min-resolution: 192dpi), (min-width: 480px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-tab2x.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tab2x.jpeg);
@@ -1069,7 +1069,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-desk2x.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desk2x.jpeg);
@@ -1202,6 +1202,11 @@ body {
   margin-bottom: 30px;
 }
 
+.directions__img {
+  max-width: 100%;
+  height: auto;
+}
+
 .directions__text {
   position: absolute;
   width: 100%;
@@ -1272,7 +1277,8 @@ body {
 }
 
 .team__photo {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -1513,7 +1519,8 @@ body {
 }
 
 .project__thumb .project__photo {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .project__label {
