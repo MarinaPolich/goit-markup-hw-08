@@ -1,18 +1,34 @@
 .project {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
+    
     margin: -15px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .project__item {
     margin: 15px;
-    width: 370px;
     line-height: 0;
+
+    @media screen and (max-width: #{$tablet - 1}) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1}) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 370px;
+    }
 }
 
 .project__link {
     display: block;
+    height: 100%;
     text-decoration: none;
 
     @include transition(box-shadow);
@@ -44,6 +60,9 @@
     .project__link:focus &::before {
         transform: translateY(0);
     }
+    .project__photo {
+        width: 100%;
+    }
 }
 
 .project__label {
@@ -68,6 +87,7 @@
 }
 
 .project__description {
+    height: calc(100% - 294px);
     padding: 20px 24px;
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;

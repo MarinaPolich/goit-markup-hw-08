@@ -2,12 +2,25 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
+
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 35px;
+    }
 }
 
-.filter__item:not(:last-child) {
-    margin-right: 8px;
+.filter__item {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
 .filter__button {
@@ -16,11 +29,17 @@
 
     background-color: var(--button-bg-color);
     color: var(--title-text-color);
+    
 
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
 
     @include transition(background-color, color, box-shadow);
+
+    @media screen and (max-width: #{$desktop - 1}) {
+        box-shadow: none;
+    }
 
     &:hover,
     &:focus,

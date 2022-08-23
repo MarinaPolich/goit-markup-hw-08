@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio Portfolio</title>
@@ -22,15 +23,34 @@
   <body>
     <header class="page-header">
       <div class="container page-header__main-nav">
-        <a href="./index.html" class="logo page-header__logo"><span class="logo__text">Web</span>Studio</a>
+        <a href="./index.html" class="logo page-header__logo"
+          ><span class="logo__text">Web</span>Studio</a
+        >
 
         <nav class="page-header__nav">
-          <ul class="list site-nav">
+          <button
+            class="menu__button js-open-menu"
+            type="button"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="menu__icon-menu"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+
+          <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфоліо</a>
+              <a
+                href="./portfolio.html"
+                class="site-nav__link site-nav__link--current"
+                >Портфоліо</a
+              >
             </li>
             <li class="site-nav__item">
               <a href="/" class="site-nav__link">Контакти</a>
@@ -38,7 +58,7 @@
           </ul>
         </nav>
 
-        <ul class="list contact">
+        <ul class="contact">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" class="contact__link">
               <svg class="contact__icon" width="16" height="12">
@@ -66,7 +86,12 @@
 
           <ul class="filter">
             <li class="filter__item">
-              <button class="filter__button filter__button-active" type="button">Все</button>
+              <button
+                class="filter__button filter__button-active"
+                type="button"
+              >
+                Все
+              </button>
             </li>
             <li class="filter__item">
               <button class="filter__button" type="button">Веб-сайти</button>
@@ -86,13 +111,29 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project1.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project1-270.jpeg 1x,
+                     ./images/project1-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project1-350.jpeg 1x,
+                      ./images/project1-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project1-450.jpeg 1x,
+                     ./images/project1-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project1-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
+
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -108,13 +149,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project2.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project2-270.jpeg 1x,
+                     ./images/project2-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project2-350.jpeg 1x,
+                      ./images/project2-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project2-450.jpeg 1x,
+                     ./images/project2-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project2-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -122,7 +178,9 @@
                   </p>
                 </div>
                 <div class="project__description">
-                  <h2 class="project__title">Постер New Orlean vs Golden Star</h2>
+                  <h2 class="project__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
                   <p class="project__text">Дизайн</p>
                 </div>
               </a>
@@ -130,13 +188,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project3.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture >
+                    <source srcset="
+                    ./images/project3-270.jpeg 1x,
+                     ./images/project3-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project3-350.jpeg 1x,
+                      ./images/project3-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project3-450.jpeg 1x,
+                     ./images/project3-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img 
+                     class="project__photo"
+                     src="./images/project3-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -152,13 +225,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project4.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project4-270.jpeg 1x,
+                     ./images/project4-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project4-350.jpeg 1x,
+                      ./images/project4-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project4-450.jpeg 1x,
+                     ./images/project4-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project4-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -174,13 +262,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project5.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project5-270.jpeg 1x,
+                     ./images/project5-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project5-350.jpeg 1x,
+                      ./images/project5-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project5-450.jpeg 1x,
+                     ./images/project5-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project5-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -196,13 +299,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project6.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project6-270.jpeg 1x,
+                     ./images/project6-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project6-350.jpeg 1x,
+                      ./images/project6-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project6-450.jpeg 1x,
+                     ./images/project6-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project6-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -218,13 +336,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project7.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project7-270.jpeg 1x,
+                     ./images/project7-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project7-350.jpeg 1x,
+                      ./images/project7-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project7-450.jpeg 1x,
+                     ./images/project7-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project7-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -240,13 +373,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project8.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project8-270.jpeg 1x,
+                     ./images/project8-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project8-350.jpeg 1x,
+                      ./images/project8-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project8-450.jpeg 1x,
+                     ./images/project8-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project8-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -262,13 +410,28 @@
             <li class="project__item">
               <a class="project__link" href="/">
                 <div class="project__thumb">
-                  <img
-                    class="project__photo"
-                    src="./images/project9.jpeg"
-                    alt="Фото проєкта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                    ./images/project9-270.jpeg 1x,
+                     ./images/project9-270-2x.jpeg 2x" 
+                     media="(min-width: 1200px)" />
+                    
+                     <source srcset="
+                     ./images/project9-350.jpeg 1x,
+                      ./images/project9-350-2x.jpeg 2x" 
+                      media="(min-width: 768px)" />
+    
+                     <source srcset="
+                    ./images/project9-450.jpeg 1x,
+                     ./images/project9-450-2x.jpeg 2x" 
+                     media="(max-width: 480px)" />
+    
+                     <img
+                     class="project__photo"
+                     src="./images/project9-450.jpeg"
+                     alt="Фото проєкта"
+                    />
+                  </picture>
                   <p class="project__label">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -398,5 +561,65 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="container mobile__menu-container js-menu-container"
+      id="mobile-menu"
+    >
+      <button class="menu__button mobile__button js-close-menu" type="button">
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use
+            class="mobile__icon-cross"
+            href="./images/symbol-defs.svg#icon-close-menu"
+          ></use>
+        </svg>
+      </button>
+
+      <nav class="menu__page">
+        <ul class="menu__nav">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link">Студія</a>
+          </li>
+          <li class="menu__item">
+            <a href="./portfolio.html" class="menu__link">Портфоліо</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__contact-page">
+        <ul class="mobile-contact">
+          <li class="mobile-contact__item">
+            <a href="tel:+380961111111" class="mobile-contact__link">
+              <span class="mobile-contact__text">+38 096 111 11 11</span>
+            </a>
+          </li>
+          <li class="mobile-contact__item">
+            <a href="mailto:info@devstudio.com" class="mobile-contact__link">
+              <span>info@devstudio.com</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-social__links">
+          <li class="mobile-social__item">
+            <a href="/" class="mobile-social__link"> Instagram </a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="/" class="mobile-social__link"> Twitter </a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="/" class="mobile-social__link"> Facebook </a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="/" class="mobile-social__link"> LinkedIn </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

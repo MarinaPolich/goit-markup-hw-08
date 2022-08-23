@@ -13,8 +13,13 @@
 }
 
 .page-header__logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
 }
 
 .page-footer__logo {

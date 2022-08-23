@@ -1,18 +1,33 @@
 .form-mail {
-    display: flex;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .form-mail__field {
     position: relative;
+
+    max-width: 450px;
+    margin-bottom: 20px;
     overflow: hidden;
+
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1}) {
+        min-width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
 }
 
 .form-mail__input {
     display: inline-block;
-
-    min-width: 378px;
+    width: 100%;
     padding: 15px 16px;
-    margin-right: 12px;
 
     background-color: rgba(255, 255, 255, 0);
     color: var(--primary-text-color);
@@ -26,6 +41,11 @@
 
     &:not(:placeholder-shown) + .form-mail__label {
         transform: translateY(150%);
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
     }
 }
 

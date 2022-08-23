@@ -2,13 +2,11 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 .page-header__main-nav {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: #{$tablet - 1}) {
+        justify-content: space-between;
+    }
 } 

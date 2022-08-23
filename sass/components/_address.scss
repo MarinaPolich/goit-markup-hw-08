@@ -3,7 +3,15 @@
 }
 
 .address-page {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet ) {
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 90px;
+        margin-bottom: 0;
+    }
 }
 
 .address__item {

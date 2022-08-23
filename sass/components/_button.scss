@@ -1,12 +1,12 @@
 .button {
     @extend %button;
-    padding: 10px 32px;
+    padding: 10px 24px;
     
     background-color: var(--accent-color);
     color: var(--primary-white-color);
 
     font-weight: 700;
-    line-height: 1.9;
+    line-height: 1.88;
     @include transition(background-color);
 
     &--big {
@@ -16,6 +16,10 @@
     &:hover,
     &:focus {
         background-color: #188CE8;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 10px 32px;
     }
 }
 

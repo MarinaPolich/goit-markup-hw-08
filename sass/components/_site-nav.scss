@@ -1,7 +1,36 @@
+.menu__button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu__icon-menu {
+    fill: var();
+    
+    @include transition(fill);
+
+    &:hover, 
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
 .site-nav {
     @extend %list;
+    
+    @media screen and (max-width: #{$tablet - 1}) {
+        display: none;
+    }
+
     display: flex;
-    margin-left: 93px;
+    margin-left: 87px;
+    margin-right: 96px;
 }
 
 .site-nav__item {
@@ -49,5 +78,3 @@
         border-radius: 2px;
     }
 }
-
-
