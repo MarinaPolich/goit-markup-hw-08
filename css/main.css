@@ -1165,6 +1165,12 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
 .features__text {
   margin-top: 0;
   margin-bottom: 0;

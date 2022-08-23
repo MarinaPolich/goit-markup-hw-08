@@ -52,6 +52,10 @@
 }
 
 .features__title {
+    @media screen and (max-width: #{$tablet - 1}) {
+        text-align: center;
+    }
+    
     margin-top: 0;
     margin-bottom: 10;
     color: var(--title-text-color);
