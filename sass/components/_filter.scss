@@ -37,10 +37,6 @@
 
     @include transition(background-color, color, box-shadow);
 
-    @media screen and (max-width: #{$desktop - 1}) {
-        box-shadow: none;
-    }
-
     &:hover,
     &:focus,
     &-active {
